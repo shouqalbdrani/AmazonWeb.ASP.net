@@ -1,0 +1,16 @@
+@model AmazonWeb.Models.Order
+
+<h2>Place Order</h2>
+<form method="post" asp-action="PlaceOrder">
+    <div class="form-group">
+        <label>User ID</label>
+        <input type="text" asp-for="UserID" class="form-control" />
+        <span asp-validation-for="UserID" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label>Status</label>
+        <input type="text" asp-for="Status" class="form-control" value="Pending" readonly />
+        <span asp-validation-for="Status" class="text-danger"></span>
+    </div>
+    <button type="submit" class="btn btn-primary">Submit Order</button>
+</form>
